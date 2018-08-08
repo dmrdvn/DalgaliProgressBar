@@ -3,7 +3,7 @@
 
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)  
 
-**WaveLoadingView** - Gerçekçi bir dalga yükleme efekti sağlayan bir Android kitaplığı
+**Wave Loading View** - Gerçekçi bir dalga yükleme efekti sağlayan bir Android kitaplığı
 
 ## Örnek Görünüm
 
@@ -22,7 +22,7 @@ Kütüphaneyi bir yerel kütüphane projesi olarak ekleyin veya build.gradle'dak
 ```groovy
 dependencies {
     implementation 'me.itangqi.waveloadingview:library:0.3.5'
-/...
+//...
 }
 ```	
 veya
@@ -80,7 +80,7 @@ Aktivitenizde setOnCheckedChangeListener, onProgressChanged vb. gibi geri çağr
 
 ## Özelleştirme
 
-Lütfen çekinmeyin :)
+Kendinize göre özelleştirmekten çekinmeyin :)
 
 |İsim|Format|Açıklama|
 |:---:|:---:|:---:|
