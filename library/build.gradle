@@ -1,0 +1,108 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+// Bu, dağıtım sırasında kullanılan kütüphane sürümüdür.
+version = "0.3.5"
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '27.0.3'
+    resourcePrefix "waveloadingview"
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 7
+        versionName "3.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // Burası önemli, lint kontrolünü çalıştıracak fakat build'i (çalışmayı) iptal etmeyecektir.
+    lintOptions {
+        abortOnError false
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.2.1'
+}
+
+def siteUrl = 'https://github.com/tangqi92/WaveLoadingView'
+def gitUrl = 'https://github.com/tangqi92/WaveLoadingView.git'
+
+group = "me.itangqi.waveloadingview"
+
+install {
+    repositories.mavenInstaller {
+        // Uygun parametrelerle POM.xml üretir.
+        pom {
+            project {
+                packaging 'aar'
+                // Açıklamanızı buraya ekleyin
+                name 'Android WaveLoadingView Widget'      //Proje açıklaması
+                url siteUrl
+                // Lisansınızı ayarlayın
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'tangqi92'       //Doldurulacak bazı temel bilgiler
+                        name 'tangqi92'
+                        email 'imtangqi@gmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "WaveLoadingView"    //Proje adı JCenter'a gönderildi.
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+

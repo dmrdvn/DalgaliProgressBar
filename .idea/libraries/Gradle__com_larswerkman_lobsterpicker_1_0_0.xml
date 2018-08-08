@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.larswerkman:lobsterpicker-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lobsterpicker-1.0.0.aar/cc38eb074e632da6151a3f37019de050/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lobsterpicker-1.0.0.aar/cc38eb074e632da6151a3f37019de050/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.larswerkman/lobsterpicker/1.0.0/57ef72d6087ee4df76fe033ad8da473fadcce3fc/lobsterpicker-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
