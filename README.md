@@ -3,21 +3,21 @@
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-WaveLoadingView-green.svg?style=true)](https://android-arsenal.com/details/1/2908)
 [![License](https://img.shields.io/badge/license-Apache%202-green.svg)](https://www.apache.org/licenses/LICENSE-2.0)  
 
-**WaveLoadingView** - An Android library that provides a realistic wave-loading effect.
+**WaveLoadingView** - Gerçekçi bir dalga yükleme efekti sağlayan bir Android kitaplığı
 
-## Sample
+## Örnek Görünüm
 
-<img src="http://7xikfc.com1.z0.glb.clouddn.com/waveloadingview.png" alt="sample" title="sample" width="400" height="680" />
+<img src="http://7xikfc.com1.z0.glb.clouddn.com/waveloadingview.png" alt="örnek" title="örnek" width="400" height="680" />
 
 
 
-## Usage
+## Kullanım
 
 **For a working implementation of this project see the `sample/` folder.**
 
-### Step 1
+### Adım 1
 
-Include the library as a local library project or add the dependency in your build.gradle.
+Kütüphaneyi bir yerel kütüphane projesi olarak ekleyin veya build.gradle'daki bağımlılığı ekleyin.
 
 ```groovy
 dependencies {
@@ -26,13 +26,13 @@ dependencies {
     // gradle cannot find it in maven central, you may try v0.3.4.
 }
 ```	
-Or
+veya
 
-Import the library, then add it to your /settings.gradle and /app/build.gradle. If you don't know how to do this, you can read my blog for help.
+Kütüphaneyi içe aktarıp, daha sonra /settings.gradle ve /app/build.gradle adresine ekleyin.. Bunu nasıl yapacağınızı bilmiyorsanız, mail adresim üzerinden bana ulaşabilirsiniz.
 
-### Step 2
+### Adım 2
 
-Include the WaveLoadingView widget in your layout. And you can customize it like this.
+Planınıza WaveLoadingView widget'ını dahil edin. Ve aşağıdaki satırları özelleştirebilirsiniz.
    
 ```xml
 <me.itangqi.waveloadingview.WaveLoadingView
@@ -54,9 +54,9 @@ Include the WaveLoadingView widget in your layout. And you can customize it like
     app:wlv_waveColor="@color/colorAccent"/>   
 ```
 
-### Step 3
+### Adım 3
 
-You can write some animation codes to the callbacks such as setOnCheckedChangeListener, onProgressChanged, etc in your Activity.
+Aktivitenizde setOnCheckedChangeListener, onProgressChanged vb. gibi geri çağrılara bazı animasyon kodları yazabilirsiniz.
 
 
 ```java
@@ -79,40 +79,40 @@ You can write some animation codes to the callbacks such as setOnCheckedChangeLi
     mWaveLoadingView.startAnimation();
 ```
 
-## Customization
+## Özelleştirme
 
-Please feel free to :)
+Lütfen çekinmeyin :)
 
-|name|format|description|
+|isim|format|açıklama|
 |:---:|:---:|:---:|
-| wlv_borderWidth | dimension |Border width, default is 0
-| wlv_borderColor | color | Border color
-| wlv_progressValue | integer | Pprogress value, default is 50
-| wlv_shapeType | enum | Shape type, default is circle
-| wlv_triangle_direction | enum | Triangle direction, default is north
-| wlv_round_rectangle | boolean | Is round rectangle, default is false
-| wlv_round_rectangle_x_and_y | integer | Round Rectangle corners, default is 30
-| wlv_waveColor | color | Wave color
-| wlv_wave_background_Color | color | Wave background color
-| wlv_waveAmplitude | float | Wave amplitude
-| wlv_titleTop | string | Top title content, default is null
-| wlv_titleCenter | string | Center title content, default is null
-| wlv_titleBottom | string | Bottom title content, default is null
-| wlv_titleTopSize | dimension | Top title size, default is 18 
-| wlv_titleCenterSize | dimension | Center title size, default is 22
-| wlv_titleBottomSize | dimension | Bottom size, default is 18
-| wlv_titleTopColor | color | Top title color
-| wlv_titleCenterColor | color | Center title color 
-| wlv_titleBottomColor | color | Bottom title color
-| wlv_titleTopStrokeColor | color | Top title stroke color 
-| wlv_titleCenterStrokeColor | color | Center title stroke color 
-| wlv_titleBottomStrokeColor | color | Bottom title stroke color
-| wlv_titleTopStrokeWidth | dimension | Top title stroke width 
-| wlv_titleCenterStrokeWidth | dimension | Center title stroke width 
-| wlv_titleBottomStrokeWidth | dimension | Bottom title stroke width  
+| wlv_borderWidth | dimension |Kenarlık kalınlığı, varsayılan 0
+| wlv_borderColor | color | Kenarlık rengi
+| wlv_progressValue | integer | Progress değeri, varsayılan 50
+| wlv_shapeType | enum | Şekil türü, varsayılan daire
+| wlv_triangle_direction | enum | Üçgen yönü, varsayılan kuzey
+| wlv_round_rectangle | boolean | Yuvarlak dikdörtgen mi, varsayılan false
+| wlv_round_rectangle_x_and_y | integer | Yuvarlak Dikdörtgenin köşeleri, varsayılan 30
+| wlv_waveColor | color | Dalga efekti rengi
+| wlv_wave_background_Color | color | Dalga efekti arka plan rengi
+| wlv_waveAmplitude | float | Dalga yoğunluğu
+| wlv_titleTop | string | Üst başlık içeriği, varsayılan null
+| wlv_titleCenter | string | Merkez başlık içeriği, varsayılan null
+| wlv_titleBottom | string | Alt başlık içeriği, varsayılan null
+| wlv_titleTopSize | dimension | Üst başlık boyutu, varsayılan 18 
+| wlv_titleCenterSize | dimension | Orta başlık boyutu, varsayılan 22
+| wlv_titleBottomSize | dimension | Alt başlık boyutu, varsayılan 18
+| wlv_titleTopColor | color | Üst başlık rengi
+| wlv_titleCenterColor | color | Orta başlık rengi 
+| wlv_titleBottomColor | color | Alt başlık rengi
+| wlv_titleTopStrokeColor | color | Üst başlık kontur rengi 
+| wlv_titleCenterStrokeColor | color | Merkez başlık kontur rengi 
+| wlv_titleBottomStrokeColor | color | Alt başlık kontur rengi
+| wlv_titleTopStrokeWidth | dimension | Üst başlık kontur genişliği 
+| wlv_titleCenterStrokeWidth | dimension | Merkez başlık strok genişliği 
+| wlv_titleBottomStrokeWidth | dimension | Alt başlık kontur genişliği  
 
 
-**All attributes have their respective getters and setters to change them at runtime.**
+**Tüm özelliklerin, çalışma zamanında bunları değiştirmek için kendi alıcıları ve ayarlayıcıları vardır.**
 
 
 ## Change Log
